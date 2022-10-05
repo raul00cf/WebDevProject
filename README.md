@@ -39,7 +39,7 @@ Além disso, é possível, a partir da plataforma Figma, verificar o funcionamen
 
 ### Build Procedures
 
-Por enquanto, as coisas desenvolvidas até o momento foram 3 páginas HTML/CSS, as quais estão em suas respectivas pastas [home](home) (tela inicial do sistema), [information](information)(tela de informação de um produto em específico) e [sign](sign) (tela de login dos usuários).
+Por enquanto, as coisas desenvolvidas até o momento foram 3 páginas HTML/CSS, as quais estão em suas respectivas pastas [home](home) (tela inicial do sistema), [information](information) (tela de informação de um produto em específico) e [sign](sign) (tela de login dos usuários).
 
 ### Problems
 
