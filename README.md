@@ -16,6 +16,10 @@ Para realizar a compra, o usuário deverá se inscrever no website utilizando o 
 
 O site também apresenta a funcionalidade para administradores da plataforma, em que o administrador poderá fazer a adição, remoção e alteração dos carros apresentados no servidor, além de ter a liberdade de verificar e deletar os usuários presentes na plataforma.
 
+É possível fazer a verificação das páginas presentes no site na plataforma Figma: https://www.figma.com/file/cvPb6Ms3RUTIOx7YrlrcsF/The-CarStore-MockUP?node-id=0%3A1
+
+Além disso, é possível, a partir da plataforma Figma, verificar o funcionamento básico das telas apresentadas.
+
 ### Comments About the Code
 
 ### Test Plan
@@ -27,5 +31,3 @@ O site também apresenta a funcionalidade para administradores da plataforma, em
 ### Problems
 
 ### Comments
-
-Figma: https://www.figma.com/file/cvPb6Ms3RUTIOx7YrlrcsF/The-CarStore-MockUP?node-id=0%3A1
