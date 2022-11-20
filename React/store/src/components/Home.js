@@ -14,7 +14,7 @@ import Cart from './Cart';
 import Profile from './Profile';
 import Checkout from './Checkout';
 
-import { useHome } from '../States/useHome';
+import { useHome } from '../Hooks/useHome';
 
 
 const Home = () => {

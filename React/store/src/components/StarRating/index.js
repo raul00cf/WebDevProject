@@ -43,12 +43,5 @@ const StarRating = ({ rating }) => {
   )
 };
 
-/*
-HeroImage.propTypes = {
-  image: PropTypes.string,
-  title: PropTypes.string,
-  text: PropTypes.string
-};
-*/
 
 export default StarRating;

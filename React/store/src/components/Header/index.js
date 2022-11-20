@@ -94,12 +94,5 @@ const Header = ({ filter, setFilter, setOption, showing, setShowing }) => {
   )
 };
 
-/*
-HeroImage.propTypes = {
-  image: PropTypes.string,
-  title: PropTypes.string,
-  text: PropTypes.string
-};
-*/
 
 export default Header;

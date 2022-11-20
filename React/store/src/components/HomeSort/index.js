@@ -34,12 +34,5 @@ const HomeSort = ({ sort, setSort, numFiltered }) => {
   )
 };
 
-/*
-HeroImage.propTypes = {
-  image: PropTypes.string,
-  title: PropTypes.string,
-  text: PropTypes.string
-};
-*/
 
 export default HomeSort;

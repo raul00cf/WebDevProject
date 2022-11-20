@@ -324,12 +324,5 @@ const ProfileAdmin = ({ option, setOption, setShowing, data, setData, numItems, 
   )
 };
 
-/*
-HeroImage.propTypes = {
-  image: PropTypes.string,
-  title: PropTypes.string,
-  text: PropTypes.string
-};
-*/
 
 export default ProfileAdmin;

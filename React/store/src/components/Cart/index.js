@@ -69,6 +69,10 @@ const Cart = ({ setShowing }) => {
   }
 
   const checkout = () => {
+    if (!session.cart.length) {
+      return;
+    }
+
     if (session.user) {
       setShowing("checkout");
     }
@@ -178,12 +182,5 @@ const Cart = ({ setShowing }) => {
   )
 };
 
-/*
-HeroImage.propTypes = {
-  image: PropTypes.string,
-  title: PropTypes.string,
-  text: PropTypes.string
-};
-*/
 
 export default Cart;

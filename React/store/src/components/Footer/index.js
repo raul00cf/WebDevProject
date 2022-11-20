@@ -110,12 +110,5 @@ const Footer = ({ showing, option, filter }) => {
   )
 };
 
-/*
-HeroImage.propTypes = {
-  image: PropTypes.string,
-  title: PropTypes.string,
-  text: PropTypes.string
-};
-*/
 
 export default Footer;

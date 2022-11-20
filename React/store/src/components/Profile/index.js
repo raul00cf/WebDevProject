@@ -29,12 +29,5 @@ const Profile = ({ option, setOption, setShowing, data, setData, numItems, setNu
   )
 };
 
-/*
-HeroImage.propTypes = {
-  image: PropTypes.string,
-  title: PropTypes.string,
-  text: PropTypes.string
-};
-*/
 
 export default Profile;

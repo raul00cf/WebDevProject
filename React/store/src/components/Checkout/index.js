@@ -103,12 +103,5 @@ const Checkout = ({ data, setData, setShowing }) => {
   )
 };
 
-/*
-HeroImage.propTypes = {
-  image: PropTypes.string,
-  title: PropTypes.string,
-  text: PropTypes.string
-};
-*/
 
 export default Checkout;

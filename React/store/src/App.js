@@ -4,7 +4,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Components
-import Home from './components/Home';
+import Home from './Components/Home';
 
 // Context
 import UserProvider from './context';
