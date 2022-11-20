@@ -33,14 +33,40 @@ Além disso, é possível, a partir da plataforma Figma, verificar o funcionamen
 
 ### Comments About the Code
 
+O código desenvolvido é apresentado dentro da pasta '/src', apresentando os arquivos básicos da funcionalidade do React e os desenvolvidos para esse projeto.
+
+- Arquivos 'App.js' e 'index.js' são os arquivos bases padrão do React;
+- Arquivo 'context.js' que apresenta a base da utilização do Context disponível pelo React;
+- Arquivo 'GlobalStyle.js' apresentado uma estilização padrão adotado por todas as páginas;
+- Pasta '/audio' onde é armazenado os arquivos de audio para a funcionalidade de corneta;
+- Pasta '/images' onde é armazeado os arquivos de imagens das páginas;
+- Pasta '/Helpers' que apresentam funções e arquivos de suporte para o funcionamento das páginas, de forma a manter a organização;
+- Pasta '/Hooks' que apresentam os controles da maioria dos hooks e estados utilizados nas páginas;
+- Pasta '/Components' que apresentam os componentes utilizados, apresentando:
+  - Arquivo 'Home.js' apresentando a central da página desenvolvida;
+  - Pastas para cada componente, apresentando dentro um arquivo 'index.js' apresentando a parte lógica de Javascript/React e um arquivo '{nomeDaPasta}.styles.js' que apresenta a estilização do componente.
+
 ### Test Plan
+
+Nenhuma ferramenta de teste foi utilizada, sendo os testes feitos a partir da build de desenvolvedor disponível pelo React.
 
 ### Test Results
 
+A partir dos testes feitos, a página apresenta-se funcional, apresentando o sistema de armazenamento de sessão e local para simular a utilização de um banco de dados.
+
 ### Build Procedures
 
-Por enquanto, as coisas desenvolvidas até o momento foram 3 páginas HTML/CSS, as quais estão em suas respectivas pastas [home](home) (tela inicial do sistema), [information](information) (tela de informação de um produto em específico) e [sign](sign) (tela de login dos usuários).
+Para utilizar rodar o código desenvolvido, deve-se realizar a instalação do Nodejs em https://nodejs.org/pt-br/ e do React em https://reactjs.org/docs/getting-started.html. Com o React instalado, deve-se fazer o download da pasta 'store' e utilizá-la para o React. Para finalizar a instalação e iniciar o funcionamento da página, deve-se, no terminal, ir até a pasta 'store' baixada e utilizar os comandos:
+
+- npm i react-router-dom
+- npm i styled-components
+
+Assim, para funcionar o código, deve-se, na pasta 'store' utilizar o comando 'npm start', iniciando o programa. Deve abrir uma janela com a página no navegador, mas caso não ocorra, pode acessar em http://localhost:3000 ou http://192.168.0.8:3000, sendo possível, esse ultimo, o acesso em qualquer dispositivo na rede local.
 
 ### Problems
 
+Nenhum problema a decarar.
+
 ### Comments
+
+Nenhum Comentario a decarar.
