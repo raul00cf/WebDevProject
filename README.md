@@ -61,7 +61,7 @@ Para utilizar rodar o código desenvolvido, deve-se realizar a instalação do N
 - npm i react-router-dom
 - npm i styled-components
 
-Assim, para funcionar o código, deve-se, na pasta 'store' utilizar o comando 'npm start', iniciando o programa. Deve abrir uma janela com a página no navegador, mas caso não ocorra, pode acessar em http://localhost:3000 ou http://192.168.0.8:3000, sendo possível, esse ultimo, o acesso em qualquer dispositivo na rede local.
+Assim, para funcionar o código, deve-se, na pasta 'store' utilizar o comando 'npm start', iniciando o programa. Deve abrir uma janela com a página no navegador, mas caso não ocorra, pode acessar em http://localhost:3000 ou http://{ip}:3000, sendo possível, esse ultimo, o acesso em qualquer dispositivo na rede local.
 
 ### Problems
 
