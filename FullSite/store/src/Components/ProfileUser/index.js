@@ -145,7 +145,7 @@ const ProfileUser = ({ option, setOption, setShowing, functions }) => {
         <p onClick={ () => { setOption("help") } } >
           Help
         </p>
-        <img src={ HorizontalLine } alt="line" />
+        <img id="line" src={ HorizontalLine } alt="line" />
         <p id="history" onClick={ () => { setOption("history") } } >
           Purchase History
         </p>

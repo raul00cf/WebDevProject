@@ -32,17 +32,10 @@ export const Line = styled.div`
   border-bottom: 0.5px solid grey;
   align-items: center;
 
-  @media screen and (max-width: 1550px) {
-    height: 100px;
-  }
-
-  @media screen and (max-width: 840px) {
-    height: 75px;
-  }
 `;
 
 export const Product = styled.span`
-  width: 40%;
+  width: 70%;
   
   #container {
     display: flex;
@@ -82,16 +75,10 @@ export const Product = styled.span`
     max-height: 140px;
   }
 
-  @media screen and (max-width: 1550px) {
-    width: 50%;
+  @media screen and (max-width: 900px) {
+    width: 40%.;
 
-    img {
-      max-height: 90px;
-    }
-  }
 
-  @media screen and (max-width: 840px) {
-    
     #image {
       display: none;
     }

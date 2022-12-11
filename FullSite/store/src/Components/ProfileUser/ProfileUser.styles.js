@@ -5,6 +5,10 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 50px auto;
+
+  @media screen and (max-width: 1400px) {
+    display: block;
+  }
 `;
 
 export const Left = styled.div`
@@ -36,13 +40,45 @@ export const Left = styled.div`
   button {
     position: absolute;
     bottom: 0px;
-    width: 208px;
+    width: 173px;
     margin-top: 50px;
+  }
+
+  @media screen and (max-width: 1400px) {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    vertical-align: middle;
+
+    #line {
+      display: none;
+    }
+  
+    p {
+      cursor: pointer;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    #account {
+      margin: 0;
+    }
+  
+    #history {
+      margin: 0;
+    }
+
+    button {
+      position: static;
+      margin: 0;
+    }
   }
 `;
 
 export const Right = styled.div`
-  width: 90%;
+  width: 100%;
   max-width: ${props => props.maxWidth}px;
   position: relative;
   padding: 20px;
@@ -147,18 +183,10 @@ export const Line = styled.div`
   padding: 7px auto;
   align-items: center;
   border-bottom: 0.5px solid ${props => props.color};
-
-  @media screen and (max-width: 1550px) {
-    height: 100px;
-  }
-
-  @media screen and (max-width: 840px) {
-    height: 75px;
-  }
 `;
 
 export const Product = styled.span`
-  width: 40%;
+  width: 50%;
   
   #container {
     display: flex;
@@ -182,23 +210,14 @@ export const Product = styled.span`
     max-height: 140px;
   }
 
-  @media screen and (max-width: 1550px) {
-    width: 50%;
-
-    img {
-      max-height: 90px;
-    }
-  }
-
-  @media screen and (max-width: 840px) {
+  @media screen and (max-width: 900px) {
     
     #image {
-      display: none;
+      
     }
 
     #info {
-      height: 75px;
-      width: 100%;
+      
     }
   }
 `;

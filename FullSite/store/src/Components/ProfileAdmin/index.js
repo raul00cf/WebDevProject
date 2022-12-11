@@ -306,76 +306,88 @@ const ProfileAdmin = ({ option, setOption, setShowing, data, setData, functions,
             </h3>
 
             <Header>
-              <Product>Image</Product>
-              <Horn>Horn</Horn>
-              <Description>Name</Description>
-              <Type>Type</Type>
-              <Color>Colors</Color>
-              <Quantity>Stock</Quantity>
-              <Rating>Rating</Rating>
-              <Subtotal>Price</Subtotal>
+              <div id="content">
+                <div id="product-horn-name">
+                  <Product>Image</Product>
+                  <Horn>Horn</Horn>
+                  <Description>Name</Description>
+                </div>
+                <div id="type-color-stock-rating-price">
+                  <Type>Type</Type>
+                  <Color>Colors</Color>
+                  <Quantity>Stock</Quantity>
+                  <Rating>Rating</Rating>
+                  <Subtotal>Price</Subtotal>
+                </div>
+              </div>
               <img id="minus" src={ Plus } alt="minus" />
             </Header>
 
             {data.map((item, id) => (
               <Line key={ id } id={ `line-${id}` } color={ id!==data.length-1 ? "grey" : "transparent" } height={ 130 } >
-                <Product>
-                  <img id={ `image-${id}` } src={  `http://${process.env.REACT_APP_IP}:5000/data/${item.image}` } alt={ item.name } onClick={ (event) => { clickImage(id, event) } } />
-                </Product>
-                <Horn>
-                  <img id={ `audio-${id}` } src={ HornIcon } alt={ item.audio } onClick={ (event) => { clickHorn(id, event) } } />
-                </Horn>
-                <Description>
-                  <textarea id={ `name-${id}` } name="description" type="text" value={ item.name } 
-                    onChange={ (event) => { handleDescriptionChange(id, event) } }
-                    onBlur={ () => { itemEdited(id) } }
-                  />
-                </Description>
-                <Type>
-                  <select id={ `type-${id}` } value={ item.type } onChange={ (event) => { handleTypeChange(id, event) } } >
-                    {['sport', 'sedan', 'hatch', 'suv'].map((type) => (
-                      <option value={ type }>{ type }</option>
-                    ))}
-                  </select>
-                </Type>
-                <Color>
-                  {item.colors.map((color, colorId) => (
-                    <img class={ `colors-${id}` } src={ colorDictionary(color) } alt={ color } 
-                      onMouseEnter={ (event) => { handleHoverColor(event, id, color, true) } }
-                      onMouseLeave={ (event) => { handleHoverColor(event, id, color, false) } }
-                      onClick={ () => { handleClickColor(id, colorId) } }
+                <div id="content">
+                  <div id="product-horn-name">
+                    <Product>
+                      <img id={ `image-${id}` } src={  `http://${process.env.REACT_APP_IP}:5000/data/${item.image}` } alt={ item.name } onClick={ (event) => { clickImage(id, event) } } />
+                    </Product>
+                    <Horn>
+                      <img id={ `audio-${id}` } src={ HornIcon } alt={ item.audio } onClick={ (event) => { clickHorn(id, event) } } />
+                    </Horn>
+                    <Description>
+                      <textarea id={ `name-${id}` } name="description" type="text" value={ item.name } 
+                        onChange={ (event) => { handleDescriptionChange(id, event) } }
+                        onBlur={ () => { itemEdited(id) } }
+                      />
+                    </Description>
+                  </div>
+                  <div id="type-color-stock-rating-price">
+                    <Type>
+                      <select id={ `type-${id}` } value={ item.type } onChange={ (event) => { handleTypeChange(id, event) } } >
+                        {['sport', 'sedan', 'hatch', 'suv'].map((type) => (
+                          <option value={ type }>{ type }</option>
+                        ))}
+                      </select>
+                    </Type>
+                    <Color>
+                      {item.colors.map((color, colorId) => (
+                        <img class={ `colors-${id}` } src={ colorDictionary(color) } alt={ color } 
+                          onMouseEnter={ (event) => { handleHoverColor(event, id, color, true) } }
+                          onMouseLeave={ (event) => { handleHoverColor(event, id, color, false) } }
+                          onClick={ () => { handleClickColor(id, colorId) } }
+                        />
+                      ))}
+                      {item.colors.length < 4 ? (
+                        <img id="plus" src={ Plus } alt={ 'plus' } 
+                          onMouseEnter={ (event) => { handleHoverPlus(event, id, true) } }
+                          onMouseLeave={ (event) => { handleHoverPlus(event, id, false) } }
+                          onClick={ () => { addColor(id) } } 
+                        />
+                      ) : (
+                        <></>
+                      )}
+                    </Color>
+                    <Quantity>
+                      <input id={ `stock-${id}` } type="number" value={ item.stock } 
+                        onChange={ (event) => {handleQuantChange(id, event) } }
+                        onBlur={ () => { itemEdited(id) } }   
+                      />
+                    </Quantity>
+                    <Rating>
+                    <input id={ `rating-${id}` } type="number" value={ parseFloat(item.rating).toFixed(1) } 
+                      onChange={ (event) => {handleRatingChange(id, event) } } 
+                      onBlur={ (event) => { handleRatingLoseFocus(id, event) } }
                     />
-                  ))}
-                  {item.colors.length < 4 ? (
-                    <img id="plus" src={ Plus } alt={ 'plus' } 
-                      onMouseEnter={ (event) => { handleHoverPlus(event, id, true) } }
-                      onMouseLeave={ (event) => { handleHoverPlus(event, id, false) } }
-                      onClick={ () => { addColor(id) } } 
-                    />
-                  ) : (
-                    <></>
-                  )}
-                </Color>
-                <Quantity>
-                  <input id={ `stock-${id}` } type="number" value={ item.stock } 
-                    onChange={ (event) => {handleQuantChange(id, event) } }
-                    onBlur={ () => { itemEdited(id) } }   
-                  />
-                </Quantity>
-                <Rating>
-                <input id={ `rating-${id}` } type="number" value={ parseFloat(item.rating).toFixed(1) } 
-                  onChange={ (event) => {handleRatingChange(id, event) } } 
-                  onBlur={ (event) => { handleRatingLoseFocus(id, event) } }
-                />
-                </Rating>
-                <Subtotal>
-                  <input id={ `price-${ id }` } type="text" 
-                    defaultValue={ convertPrice(item.price) } 
-                    onChange={ (event) => { handlePriceChange(id, event) } } 
-                    onClick={ (event) => { handlePriceChange(id, event) } } 
-                    onBlur={ (event) => { handlePriceLoseFocus(id, event) } } 
-                  />
-                </Subtotal>
+                    </Rating>
+                    <Subtotal>
+                      <input id={ `price-${ id }` } type="text" 
+                        defaultValue={ convertPrice(item.price) } 
+                        onChange={ (event) => { handlePriceChange(id, event) } } 
+                        onClick={ (event) => { handlePriceChange(id, event) } } 
+                        onBlur={ (event) => { handlePriceLoseFocus(id, event) } } 
+                      />
+                    </Subtotal>
+                  </div>
+                </div>
                 <img id="minus" class="rotate" src={ Plus } alt="minus" onClick={ () => { deleteItem(id) } } />
               </Line>
             ))}

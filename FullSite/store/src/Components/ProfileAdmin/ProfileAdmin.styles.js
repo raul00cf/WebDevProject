@@ -5,6 +5,10 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 50px auto;
+
+  @media screen and (max-width: 1400px) {
+    display: block;
+  }
 `;
 
 export const Left = styled.div`
@@ -15,6 +19,7 @@ export const Left = styled.div`
   padding: 20px;
   position: relative;
   max-height: 650px;
+  margin-right: 20px;
 
   img {
     width: 208px;
@@ -36,20 +41,45 @@ export const Left = styled.div`
   button {
     position: absolute;
     bottom: 0px;
-    width: 208px;
+    width: 173px;
     margin-top: 50px;
+  }
+
+  @media screen and (max-width: 1400px) {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    vertical-align: middle;
+
+    #products {
+      margin-top: 0;
+    }
+
+    p {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    #users {
+      margin-bottom: 0;
+    }
+
+    button {
+      position: static;
+      margin: 0;
+    }
   }
 `;
 
 export const Right = styled.div`
-  width: 90%;
-  max-width: 1200px;
+  width: 100%;
   position: relative;
   padding: 20px;
 `;
 
 export const Button = styled.button`
-  width: 120px;
   float: right;
   border-radius: 10px;
   border: none;
@@ -83,11 +113,52 @@ export const Header = styled.div`
   img {
     visibility: hidden;
   }
+
+  #product-horn-name {
+    width: 49%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #type-color-stock-rating-price {
+    width: 51%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #content {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 1000px) {
+    height: auto;
+
+    #content {
+      display: block;
+      margin: 10px 0px;
+    }
+
+    #product-horn-name {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #type-color-stock-rating-price {
+      margin-top: 10px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 `;
 
 export const Line = styled.div`
   display: flex;
-  height: ${props => props.height}px;
   justify-content: space-between;
   text-align: center;
   padding: 7px auto;
@@ -99,27 +170,73 @@ export const Line = styled.div`
     -webkit-transform:rotate(45deg);
   }
 
-  @media screen and (max-width: 1550px) {
-    height: 100px;
+  #product-horn-name {
+    width: 49%;
+    height: ${props => props.height}px;
+    display: flex;
+    justify-content: space-between;
   }
 
-  @media screen and (max-width: 840px) {
-    height: 75px;
+  #type-color-stock-rating-price {
+    width: 51%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #content {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    align-items: center;
+    margin: 10px 0px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    height: auto;
+
+    #content {
+      display: block;
+      margin: 10px 0px;
+    }
+
+    #product-horn-name {
+      width: 100%;
+      height: 120px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #type-color-stock-rating-price {
+      margin-top: 10px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
   }
 `;
 
 export const Product = styled.span`
-  width: 20%;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
   img {
     float: left;
-    height: 120px;
+    height: 100%;
     cursor: pointer;
   }
 `;
 
 export const Horn = styled.span`
-  width: 5%;
+  width: 40px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
   img {
     width: 40px;
@@ -128,8 +245,12 @@ export const Horn = styled.span`
 `;
 
 export const Description = styled.span`
-  width: 10%;
+  width: 35%; 
+  height: 100%;
   align-items: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   textarea {
     -webkit-box-shadow: -2px 2px 10px 0px rgba(50, 50, 50, 0.22);
@@ -140,9 +261,17 @@ export const Description = styled.span`
     padding: 10px;
     flex: 1;
     font-size: 14px;
-    height: 100px;
+    height: 100%;
     resize: none;
     max-width: 115px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    width: 35%;
+
+    textarea {
+      max-width: 100%;
+    }
   }
 `;
 
@@ -159,6 +288,17 @@ export const Type = styled.span`
     flex: 1;
     font-size: 18px;
     max-width: 100px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    select {
+      font-size: 14px;
+      height: 45px;
+    }
+
+    option {
+      font-size: 14px;
+    }
   }
 `;
 
@@ -188,7 +328,7 @@ export const Color = styled.span`
 `;
 
 export const Quantity = styled.span`
-  width: 100px;
+  width: 60px;
 
   input {
     -webkit-box-shadow: -2px 2px 10px 0px rgba(50, 50, 50, 0.22);
@@ -205,6 +345,15 @@ export const Quantity = styled.span`
     ::-webkit-outer-spin-button, ::-webkit-inner-spin-button {
       -webkit-appearance: none;
       margin: 0;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    width: 60px;
+    
+    input {
+      font-size: 14px;
+      height: 45px;
     }
   }
 `;
@@ -229,10 +378,17 @@ export const Rating = styled.span`
       margin: 0;
     }
   }
+
+  @media screen and (max-width: 1000px) {
+    input {
+      font-size: 14px;
+      height: 45px;
+    }
+  }
 `;
 
 export const Subtotal = styled.span`
-  width: 15%;
+  width: 130px;
 
   input {
     -webkit-box-shadow: -2px 2px 10px 0px rgba(50, 50, 50, 0.22);
@@ -251,6 +407,13 @@ export const Subtotal = styled.span`
       margin: 0;
     }
   }
+
+  @media screen and (max-width: 1000px) {
+    input {
+      font-size: 14px;
+      height: 45px;
+    }
+  }
 `;
 
 export const Name = styled.span`
@@ -258,7 +421,7 @@ export const Name = styled.span`
 `;
 
 export const Email = styled.span`
-  width: 20%;
+  width: 40%;
 `;
 
 export const Phone = styled.span`
