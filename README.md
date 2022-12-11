@@ -33,13 +33,28 @@ Além disso, é possível, a partir da plataforma Figma, verificar o funcionamen
 
 ### Comments About the Code
 
+O código é apresentado em duas partes, sendo todo ele encontrado dentro da pasta '/FullSite'. Nessa pasta existem os códigos para o servidor (pasta '/server') e para a aplicação (pasta '/store')
+
+#### Pasta '/server'
+
+Dentro da pasta server apresentam-se os arquivos para o servidor.
+
+- Arquivo '.env' que apresenta a informação da conexão com o servidor MongoDB;
+- Pasta '/bin', onde é iniciado o servidor;
+- Pasta '/data', onde são armazeados e encontrados os arquivos de imagem e audio do servidor;
+- Pasta '/models', onde são apresentados os modelos do MongoDB do usuário e do produto;
+- Pasta '/src', onde é apresentado toda a lógica do servidor:
+  - Arquivo 'app.js' que apresenta-se como o arquivo principal do desenvolvimento do servidor;
+  - Pasta '/routes', onde são apresentadas as funções de requisição para cada rota acessada.
+  
+#### Pasta '/store'
+
 O código desenvolvido é apresentado dentro da pasta '/src', apresentando os arquivos básicos da funcionalidade do React e os desenvolvidos para esse projeto.
 
 - Arquivos 'App.js' e 'index.js' são os arquivos bases padrão do React;
 - Arquivo 'context.js' que apresenta a base da utilização do Context disponível pelo React;
 - Arquivo 'GlobalStyle.js' apresentado uma estilização padrão adotado por todas as páginas;
-- Pasta '/audio' onde é armazenado os arquivos de audio para a funcionalidade de corneta;
-- Pasta '/images' onde é armazeado os arquivos de imagens das páginas;
+- Pasta '/images' onde é armazeado as imagens padrões da aplicação;
 - Pasta '/Helpers' que apresentam funções e arquivos de suporte para o funcionamento das páginas, de forma a manter a organização;
 - Pasta '/Hooks' que apresentam os controles da maioria dos hooks e estados utilizados nas páginas;
 - Pasta '/Components' que apresentam os componentes utilizados, apresentando:
@@ -56,12 +71,9 @@ A partir dos testes feitos, a página apresenta-se funcional, apresentando o sis
 
 ### Build Procedures
 
-Para utilizar rodar o código desenvolvido, deve-se realizar a instalação do Nodejs em https://nodejs.org/pt-br/ e do React em https://reactjs.org/docs/getting-started.html. Com o React instalado, deve-se fazer o download da pasta 'store' e utilizá-la para o React. Para finalizar a instalação e iniciar o funcionamento da página, deve-se, no terminal, ir até a pasta 'store' baixada e utilizar os comandos:
+Para utilizar rodar o código desenvolvido, deve-se realizar a instalação do Nodejs em https://nodejs.org/pt-br/ e do React em https://reactjs.org/docs/getting-started.html. Para realizar as instalações dos pacotes utilizados, basta abrir a pasta '/server' dentro do terminal e utilizar o comando `npm install`. Além disso, deve-se fazer o mesmo para a pasta '/store'.
 
-- npm i react-router-dom
-- npm i styled-components
-
-Assim, para funcionar o código, deve-se, na pasta 'store' utilizar o comando 'npm start', iniciando o programa. Deve abrir uma janela com a página no navegador, mas caso não ocorra, pode acessar em http://localhost:3000 ou http://{ip}:3000, sendo possível, esse ultimo, o acesso em qualquer dispositivo na rede local.
+Assim, para funcionar o código, deve-se abrir em um terminal a pasta '/server' e utilizar o comando `npm run start`. Em seguida, irá aparecer que o servidor está funcionando em http://localhost:5000/ - http://{ip}:5000. Assim, deve-se colocar o valor de {ip} como o valor do endereço dentro do arquivo '.env' pasta '/store' (deve ficar REAT_APP_IP={valor do ip que o servidor está funcionando}, sem os {}). Por fim, deve-se abrir em um novo terminal a pasta '/store' e utilizar o comando `npm start`, iniciando a aplicação. Assim, deve abrir uma janela com a página no navegador, mas caso não ocorra, pode acessar em http://localhost:3000 (na mesma máquina que está rodando os terminais) ou http://{ip que colocou no .env / que está rodando o servidor}:3000, sendo possível, esse ultimo, o acesso em qualquer dispositivo na rede local.
 
 ### Problems
 
